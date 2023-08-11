@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cascadia Mono";
+}
+
+.background {
+  background-size: 5.625rem 5.625rem;
+  background-image: linear-gradient(to right, rgba(10, 19, 180, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(10, 19, 180, 0.1), transparent 1px);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 200vh;
+}
+
+html {
+  font-size: 12.406px;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vw;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+}
+header .left {
+  position: relative;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #EFEEEB;
+}
+header .left nav {
+  position: absolute;
+  top: 3rem;
+  margin: 0 auto;
+  z-index: 100000;
+}
+header .left nav ul {
+  display: flex;
+  width: 40rem;
+  height: 2.375rem;
+  flex-shrink: 0;
+  justify-content: space-between;
+  font-family: "Cascadia Mono";
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 2.8125rem */
+  font-size: 1.5625rem;
+}
+header .left nav ul li {
+  text-align: center;
+  width: 12.47956rem;
+}
+header .left nav ul li a {
+  color: #18106C;
+  text-decoration: none;
+}
+header .left .content {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+header .left .typography {
+  z-index: 1;
+  gap: 1.8rem;
+  display: flex;
+}
+header .left .typography .sign {
+  width: 9.9375rem;
+  height: 6.1875rem;
+  flex-shrink: 0;
+}
+header .left .typography .title {
+  width: 44.6875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+header .left h1 {
+  color: #18106C;
+  /* Headline */
+  font-family: "Cascadia Mono";
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 3.75rem */
+  letter-spacing: 0.05rem;
+}
+header .left h1 strong {
+  font-weight: 400;
+  color: #1CA4CD;
+}
+header .left h2 {
+  color: #18106C;
+  font-family: "Cascadia Mono";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.875rem */
+  letter-spacing: 0.025rem;
+}
+header .left h2 strong {
+  font-weight: 600;
+  color: #1CA4CD;
+}
+header .left .social-icon {
+  display: flex;
+  width: 14.43806rem;
+  justify-content: space-between;
+}
+header .left .social-icon img {
+  width: 2.31269rem;
+  height: 2.31269rem;
+}
+header .left .cloud1 {
+  background: url("../assets/cloud 1.png");
+  width: 12.8125rem;
+  height: 12.8125rem;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 6rem;
+  left: 7rem;
+}
+header .left .cloud2 {
+  background: url("../assets/cloud 2.png");
+  width: 12.8125rem;
+  height: 12.8125rem;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 30rem;
+  left: 1rem;
+}
+header .left .cloud3 {
+  background: url("../assets/cloud 3.png");
+  width: 12.8125rem;
+  height: 12.8125rem;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 12rem;
+  left: 47rem;
+}
+header .right {
+  background: #FFF2C5;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .right section {
+  z-index: 10;
+}
+header .right .avatar {
+  background: url("../assets/Ly Tinh.png");
+  width: 36.8125rem;
+  height: 37.78125rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+header .img-list {
+  position: absolute;
+  top: 46rem;
+  left: 14.625rem;
+  display: flex;
+  width: 53.6875rem;
+  height: 11.375rem;
+  justify-content: space-between;
+}
+header .img-list img {
+  width: 11.375rem;
+  height: 11.375rem;
+}
+header .line-bg {
+  position: absolute;
+  width: 100rem;
+  height: 100vh;
+  flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: url("../assets/line-bg.png");
+  right: -22rem;
+  z-index: 0;
+}/*# sourceMappingURL=style.css.map */
