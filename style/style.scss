@@ -2,199 +2,225 @@
 @import 'typography';
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Cascadia Mono';
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cascadia Mono';
 }
-.background{
-    background-size: 5.625rem 5.625rem;
-    background-image:
-      linear-gradient(to right, rgba(10, 19, 180, 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(10, 19, 180, 0.1), transparent 1px);
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 200vh;
-}   
+
+.background {
+  background-size: 5.625rem 5.625rem;
+  background-image:
+    linear-gradient(to right, rgba(10, 19, 180, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 19, 180, 0.1), transparent 1px);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 200vh;
+}
+
 html {
-    font-size: 12.406px;
+  font-size: 12.406px;
 }
+
 body {
-    overflow-x: hidden;
-    overflow-y: scroll;    
-    height: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vw;
 }
+
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
+
 header {
+  display: flex;
+  width: 100vw;
+
+  .left {
+    position: relative;
+    width: 50vw;
     display: flex;
-    width: 100vw;
-    .left {
-        position: relative;
-        width: 50vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $primary-2;
+
+    nav {
+      position: absolute;
+      top: 3rem;
+      margin: 0 auto;
+      z-index: 100000;
+      ul {
+        display: flex;
+        width: 40rem;
+        height: 2.375rem;
+        flex-shrink: 0;
+        justify-content: space-between;
+        @include Content;
+        font-size: 1.5625rem;
+        li {
+          text-align: center;
+          width: 12.47956rem;
+          a {
+            color: $neutral-1;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    .typography {
+      z-index: 1;
+      gap: 1.8rem;
+      display: flex;
+
+      .sign {
+        width: 9.9375rem;
+        height: 6.1875rem;
+        flex-shrink: 0;
+      }
+
+      .title {
+        width: 44.6875rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        height: 100vh;
-        background:$primary-2;
-        
-        nav {
-            position: absolute;
-            top: 3rem;
-            margin: 0 auto;
-            z-index: 100000;
-            ul {
-                display: flex;
-                width: 40rem;
-                height: 2.375rem;
-                flex-shrink: 0;
-                
-                justify-content: space-between;
-                @include Content;
-                font-size: 1.5625rem;
-                li {
-                    text-align: center;
-                    width: 12.47956rem;
-                    a {
-                        color: $neutral-1;
-                        text-decoration: none;
-                    }
-                }
-            }
-            
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            z-index: 1;
-        }
-        .typography {
-            z-index: 1;
-            gap: 1.8rem;
-            display: flex;
-            .sign {
-                width: 9.9375rem;
-                height: 6.1875rem;
-                flex-shrink: 0;
-            }
-            .title {
-                width: 44.6875rem;
-                display: flex;
-                flex-direction: column;
-                gap: 2.5rem;
-                
-            }
-        }
-        h1 {
-            color: $neutral-1;
-            
-            @include Headline;
-            strong {
-                font-weight: 400;
-                color: $semantic-1;
-            }
-        }
-        h2 {
-            color: $neutral-1;
-            @include SubHealine;
-            strong {
-                font-weight: 600;
-                color: $semantic-1;
-            }
-        }
-        .social-icon {
-            display: flex;
-            width: 14.43806rem;
-            justify-content: space-between;
-            img {
-                width: 2.31269rem;
-                height: 2.31269rem;
-            }
-        }
-
-        .cloud1 {
-            background: url("../assets/cloud\ 1.png");
-            width: 12.8125rem;
-            height: 12.8125rem;
-            background-size:     cover;                      /* <------ */
-            background-repeat:   no-repeat;
-            background-position: center center; 
-            position: absolute;
-            top: 6rem;
-            left: 7rem;
-        }
-        .cloud2 {
-            background: url("../assets/cloud\ 2.png");
-            width: 12.8125rem;
-            height: 12.8125rem;
-            background-size:     cover;                      /* <------ */
-            background-repeat:   no-repeat;
-            background-position: center center; 
-            position: absolute;
-            top: 30rem;
-            left: 1rem;
-        }
-        .cloud3 {
-            background: url("../assets/cloud\ 3.png");
-            width: 12.8125rem;
-            height: 12.8125rem;
-            background-size:     cover;                      /* <------ */
-            background-repeat:   no-repeat;
-            background-position: center center;    
-            position: absolute; 
-            top: 12rem;
-            left: 47rem;
-        }
-
-    }
-    .right {
-        background: $accent-2;
-        width: 50vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        section {
-            z-index: 10;
-        }
-        .avatar {
-            
-            background: url("../assets/Ly Tinh.png");
-            width: 36.8125rem;
-            height: 37.78125rem;
-            background-size: cover;                      
-            background-repeat: no-repeat;
-            background-position: center center;   
-        }
-    }
-    .img-list {
-        position: absolute;
-        top: 46rem;
-        left: 5.625*2.6rem;
-        display: flex;
-        width: 53.6875rem;
-        height: 11.375rem;
-        justify-content: space-between;
-        img {
-            width: 11.375rem;
-            height: 11.375rem;
-        }
-    }
-    .line-bg {
-        position: absolute;
-        width: 100rem;
-        height: 100vh;
-        flex-shrink: 0;
-        background-size: cover;                      
-        background-repeat: no-repeat;
-        background-position: center center;   
-        background: url("../assets/line-bg.png");
-        right: -22rem;
-        z-index: 0;
-        
+        gap: 2.5rem;
+      }
     }
 
+    h1 {
+      color: $neutral-1;
+      @include Headline;
+      strong {
+        font-weight: 400;
+        color: $semantic-1;
+      }
+    }
+
+    h2 {
+      color: $neutral-1;
+      @include SubHealine;
+      strong {
+        font-weight: 600;
+        color: $semantic-1;
+      }
+    }
+
+    .social-icon {
+      display: flex;
+      width: 14.43806rem;
+      justify-content: space-between;
+      a img {
+        width: 2.31269rem;
+        height: 2.31269rem;
+      }
+    }
+
+    .cloud1 {
+      background: url("../assets/cloud\ 1.png");
+      width: 12.8125rem;
+      height: 12.8125rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 6rem;
+      left: 7rem;
+    }
+
+    .cloud2 {
+      background: url("../assets/cloud\ 2.png");
+      width: 12.8125rem;
+      height: 12.8125rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 30rem;
+      left: 1rem;
+    }
+
+    .cloud3 {
+      background: url("../assets/cloud\ 3.png");
+      width: 12.8125rem;
+      height: 12.8125rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 12rem;
+      left: 47rem;
+    }
+  }
+
+  .right {
+    background: $accent-2;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    section {
+      z-index: 10;
+    }
+
+    .avatar {
+      background: url("../assets/Ly Tinh.png");
+      width: 36.8125rem;
+      height: 37.78125rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  .img-list {
+    position: absolute;
+    top: 46rem;
+    left: 5.625 * 2.6rem;
+    display: flex;
+    width: 53.6875rem;
+    height: 11.375rem;
+    justify-content: space-between;
+    img {
+      width: 11.375rem;
+      height: 11.375rem;
+    }
+  }
+
+  .line-bg {
+    position: absolute;
+    width: 100rem;
+    height: 100vh;
+    flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background: url("../assets/line-bg.png");
+    right: -22rem;
+    z-index: 0;
+  }
+}
+
+header {
+  abc {
+    .matlitinh {
+      h1 {
+        color: $neutral-1;
+        @include Headline;
+        strong {
+          font-weight: 400;
+          color: $semantic-1;
+          color: var(--primary-1, #FFF9F9);
+        }
+      }
+    }
+  }
 }
