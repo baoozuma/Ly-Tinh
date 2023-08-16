@@ -261,7 +261,98 @@ header .right section .avatar {
   z-index: 0;
 }
 
+.abc {
+  width: 100vw;
+  height: 120vh;
+  flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  transition: background-image 0.5s ease-in-out;
+  /* Thêm hiệu ứng transition cho background image */
+}
 
+.abc:hover {
+  background-image: url("/assets/Rectangle 18.png");
+  /* Thay đổi background image khi hover */
+}
+
+.matlitinh {
+  background-image: url("/assets/Rectangle 11.png");
+  width: 404px;
+  height: 450px;
+  bottom: -20px;
+  left: 180px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.typography2 {
+  color: #18106C;
+  /* Màu chữ mặc định */
+  /* Headline */
+  font-family: "Cascadia Mono";
+  font-size: 2.5rem;
+  bottom: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 3.75rem */
+  letter-spacing: 0.05rem;
+  transition: color 0.5s;
+  /* Thêm hiệu ứng transition cho color text */
+}
+
+.typography2 h2 {
+  margin: 60px;
+  font-family: "Cascadia Mono2";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.typography2 h2 strong {
+  color: var(--semantic-1, #1CA4CD);
+  font-family: "Cascadia Mono2";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.abc:hover .typography2 {
+  color: #FFF;
+  transition: color 0.2s ease-in-out;
+}
+
+.abc:hover .typography2 strong {
+  color: var(--primary-3, #D9D9D9);
+  font-size: 25px;
+  font-style: normal;
+  transition: color 0.2s ease-in-out;
+  /* Thêm hiệu ứng transition cho background image */
+}
+
+.leader {
+  display: flex;
+  color: #18106C;
+  margin-left: 90rem;
+  margin-top: 5rem;
+  flex-shrink: 0;
+  text-align: center;
+  color: var(--neutral-2, #18106C);
+  text-align: center;
+  font-family: "Cascadia Mono2";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  /* 67.5px */
+  letter-spacing: 0.9px;
+}
 
 .explore h2 {
   color: var(--neutral-2, #18106c);
